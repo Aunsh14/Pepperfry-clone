@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div>
+          <h1>login</h1>
+          <h3> Email</h3>
+          <input id="Email" type="text" placeholder="Enter your email">
+          <h3>Enter Email</h3>
+          <input id="Password" type="password" placeholder="Enter your Password">
+          
+        
+          <br>
+          <button onclick="abcd()">open</button>
+      
+        </div>
+      </div>
+</body>
+</html>
+<script>
+    var reg = JSON.parse(localStorage.getItem("aunshdatabase"))
+    function abcd(){
+        var email=document.getElementById("Email").value
+        var password=document.getElementById("Password").value
+        for (var i=0;i<reg.length;i++){
+            if(reg[i].EMAIL==email && reg[i].PASSWORD==password){
+                window.location.href="homepage.html"
+            }
+        }
+    }
+</script>
